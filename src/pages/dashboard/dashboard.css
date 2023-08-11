@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard{
+    width: 100vw;
+}
+
+h1{
+    text-align: center;
+    margin: 1rem 0 2rem;
+}
+
+.userDetailTable{
+    width: 80vw;
+    margin: auto;
+    border: 1px solid #121212;
+}
+
+.heading{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.tableBody{
+    max-height: 70vh;
+    overflow: scroll;
+}
+
+.tableBody::-webkit-scrollbar{
+    display: none;
+}
+
+.userRow{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.5rem;
+    text-align: center;
+}

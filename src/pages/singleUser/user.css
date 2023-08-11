@@ -1,0 +1,13 @@
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 3rem;
+    margin: auto;
+    height: 100vh;
+    width: fit-content;
+}
+
+span{
+    font-weight: bold;
+}
