@@ -1,13 +1,14 @@
 import './dashboard.css';
 
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { db } from '../../firebase';
 import { getDocs, collection } from 'firebase/firestore';
 
-const Dashboard = () => {
+const Dashboard = ({setCount}) => {
     const [userDetails, setUserDetails] = useState([]);
     const userCollection = collection(db, "users");
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getAllUsers = async () => {
@@ -22,8 +23,17 @@ const Dashboard = () => {
         getAllUsers();
     }, [userDetails])
 
+    const logout = (e) => {
+        e.preventDefault();
+        setCount(0);
+        navigate('/login');
+    }
+
     return (
         <>
+        <div className="logout">
+            <button className='loutbtn' onClick={logout} >Logout</button>
+        </div>
             <div className="dashboard">
                 <h1>Admin Panel</h1>
                 <div className="userDetailTable">

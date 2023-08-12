@@ -43,3 +43,14 @@ h1{
     padding: 0.5rem;
     text-align: center;
 }
+
+.logout{
+    margin-right: 50px;
+    margin-top: 10px;
+    text-align: end;
+}
+
+.loutbtn{
+    padding: 5px;
+    cursor: pointer;
+}
